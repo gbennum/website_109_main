@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>109 Main</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+  	<div class="welcome-navigation-bar">
+			<%= link_to('109 Main St. Stowe, VT', '/welcome/index')%>
+			<div id="dropdown_toggle" class="dropdown-toggle">Suites</div>
+			<div id="dropdown" class="hidden-dropdown">
+				<%= link_to('The Pinnacle Suite', '/suites/pinnacle')%>
+				<%= link_to('The Sterling Suite', '/suites/sterling')%>
+			</div>
+		</div>
+    <%= yield %>
+  </body>
+</html>
