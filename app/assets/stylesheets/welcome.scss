@@ -85,6 +85,14 @@ body {
 	  	color: $name-color;
 	  }
 	}
+	.about-building-text-container {
+		@extend .about-center-container;
+		font-size: 30px;
+		line-height: 30px;
+		a {
+			color: $name-color;
+		}
+	}
 	.about-center-text-container {
 		@extend .about-center-container;
 		padding: 75px 0px 75px 0px;
@@ -144,7 +152,8 @@ body {
 	white-space: nowrap;
 	height: 500px;
 	width: 100%;
-	overflow-x: auto;
+	overflow: -moz-scrollbars-vertical; 
+	overflow-x: scroll;
 	.more-image {
 		background-image: url(asset-path("icon-circle-more.png"));
 		position: absolute;
@@ -153,7 +162,7 @@ body {
 		width: 96px;
 		height: 76px;
 		background-size: contain;
-		z-index: 100;
+		z-index: 80;
 		background-color: black;
 		opacity: .75;
 	}
@@ -177,6 +186,17 @@ body {
 	}
 }
 
+.suite-scrollable-image-container::-webkit-scrollbar {
+  -webkit-appearance: none;
+  width: 5px;
+  height: 8px;
+}
+.suite-scrollable-image-container::-webkit-scrollbar-thumb {
+  border-radius: 8px;
+  background-color: rgba(0, 0, 0, .5);
+  -webkit-box-shadow: 0 0 1px rgba(255, 255, 255, .5);
+}
+
 
 .main-page-body{
 	padding-top:75px;
@@ -189,7 +209,7 @@ body {
 	}
 	.suite-basics {
 		margin: 0 auto;
-		width: 675px;
+		width: 580px;
 		padding: 5px 0px;
 		border-bottom: 1px solid $dark-font;
 		border-top: 1px solid $dark-font;
@@ -255,8 +275,26 @@ body {
 	background-color: $base-color;
 }
 
+.about-building-container {
+	width: 100%;
+	display: inline-block;
+	.about-building-image {
+		display: block;
+		height: 816px;
+		width: 1088px;
+		margin: 0 auto;
+	}
+}
 
-
+.about-stowe-image-container {
+	width: 100%;
+	display: inline-block;
+	.about-stowe-image {
+		display: block;
+		width: 100%;
+		margin: 0 auto;
+	}
+}
 
 
 
