@@ -1,6 +1,7 @@
 $name-color: #34893a;
 $base-color: #ededed;
 $font-color: #707070;
+$dark-font: #191919;
 
 
 body {
@@ -59,16 +60,6 @@ body {
 			line-height: 20px;
 
 		}
-	}
-}
-
-.main-page-body{
-	padding-top:75px;
-	position: relative;
-	.suite-title {
-		text-align: center;
-		font-size: 32px;
-		margin: 12px 0px 12px 0px;
 	}
 }
 
@@ -144,25 +135,6 @@ body {
 	background-color: $base-color;
 }
 
-.suite-about-container {
-	position: relative;
-	.suite-about-centered-container {
-		margin: 0 auto;
-		width: 100%;
-		max-width: 75vw;
-	  padding-top: 25px;
-	  .suite-about-header {
-	  	font-size: 22px;
-			line-height: 22px;
-			margin-bottom: 12px;
-	  }
-	  .suite-about-description {
-	  	font-size: 14px;
-		  line-height: 14px;
-	  }
-	}
-}
-
 .suite-about-container:last-child {
 	padding-bottom: 25px;
 }
@@ -203,6 +175,79 @@ body {
 	    left: -63px;
 		}
 	}
+}
+
+
+.main-page-body{
+	padding-top:75px;
+	position: relative;
+	color: $dark-font;
+	.suite-title {
+		text-align: center;
+		font-size: 32px;
+		margin: 12px 0px 12px 0px;
+	}
+	.suite-basics {
+		margin: 0 auto;
+		width: 675px;
+		padding: 5px 0px;
+		border-bottom: 1px solid $dark-font;
+		border-top: 1px solid $dark-font;
+		.suite-basic-text {
+			height: 24px;
+			text-align: center;
+			display: inline-block;
+			font-size: 14px;
+			line-height: 24px;
+			padding: 0px 25px;
+			border-right: 1px solid $dark-font;
+		}
+		.suite-basic-text:last-child {
+			border-right: 0px solid transparent;
+		}
+	}
+	.suite-about-left-container {
+		width: calc(65% - 100px);
+		display: inline-block;
+		vertical-align: top;
+		padding:25px 50px;
+		.book-now {
+	    background-color: $name-color;
+	    color: white;
+	    width: 200px;
+	    height: 25px;
+	    padding: 10px;
+	    margin: 0 auto;
+	    display: block;
+	    text-decoration: none;
+	    line-height: 25px;
+	    border-radius: 5px;
+	    text-align: center;
+	    margin-top: 50px;
+		}
+	}
+	.suite-about-right-container {
+		display: inline-block;
+		width: 33%;
+		.suite-about-container {
+			.suite-about-centered-container {
+				margin: 0 auto;
+				width: 100%;
+				max-width: 75vw;
+			  padding-top: 25px;
+			  .suite-about-header {
+			  	font-size: 22px;
+					line-height: 22px;
+					margin-bottom: 12px;
+			  }
+			  .suite-about-description {
+			  	font-size: 14px;
+				  line-height: 16px;
+			  }
+			}
+		}
+	}
+
 }
 
 .bottom-bar {
