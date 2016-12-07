@@ -20,20 +20,23 @@ body {
 	text-align: center;
 	a {
 		color: $name-color;
-		font-size: 47px;
+		font-size: 36px;
 		line-height: 75px;
 		text-decoration: none;
+		float: left;
+    margin-left: 25px;
 	}
 	.dropdown-toggle {
-		top: 0px;
-		right: 0px;
-		position: absolute;
-		height: 75px;
-		width: 150px;
+		float: right;
+		height: 72px;
+		width: 125px;
 		line-height: 75px;
-		border-left: 1px solid #808080;
-		font-size: 18px;
+		color: $name-color;
+		font-size: 16px;
 		cursor: pointer;
+	}
+	.dropdown-toggle:hover {
+		border-bottom: 3px solid $name-color;
 	}
 	.hidden-dropdown {
 		display: none;
@@ -62,6 +65,11 @@ body {
 .main-page-body{
 	padding-top:75px;
 	position: relative;
+	.suite-title {
+		text-align: center;
+		font-size: 32px;
+		margin: 12px 0px 12px 0px;
+	}
 }
 
 .main-container {
@@ -81,18 +89,27 @@ body {
 		width: 100%;
 		max-width: 65vw;
 	  text-align: center;
-	  padding: 75px 0px 75px 0px;
+	  background-color: white;
 	  strong {
 	  	color: $name-color;
 	  }
 	}
+	.about-center-text-container {
+		@extend .about-center-container;
+		padding: 75px 0px 75px 0px;
+	}
 	.about-center-image-container {
 		max-width: 75vw;
+		height: 350px;
 		.suite-about-photograph {
 	  	width: 66%;
 	  	height: 350px;
 	  	display: inline-block;
-	  	float: left;
+	  	img {
+	  		float: left;
+	  		height: 350px;
+	  		background-size: contain;
+	  	}
 	  }
 	  .suite-about {
 	  	padding: 25px;
@@ -101,7 +118,6 @@ body {
 	  	display: inline-block;
 	  	width: calc(34% - 50px);
 	  	height: 300px;
-	  	background-color: white;
 	  	text-decoration: none;
 	  	color: $font-color;
 	  	.suite-about-name {
@@ -128,14 +144,6 @@ body {
 	background-color: $base-color;
 }
 
-.pinnacle-thumb {
-	background-image: url(asset-path("pinnacle_thumb.png"));
-}
-
-.sterling-thumb {
-	background-image: url(asset-path("sterling_thumb.png"));
-}
-
 .suite-about-container {
 	position: relative;
 	.suite-about-centered-container {
@@ -159,12 +167,48 @@ body {
 	padding-bottom: 25px;
 }
 
+.suite-scrollable-image-container {
+	display: inline-block;
+	white-space: nowrap;
+	height: 500px;
+	width: 100%;
+	overflow-x: auto;
+	.more-image {
+		background-image: url(asset-path("icon-circle-more.png"));
+		position: absolute;
+		top: 250px;
+		right: 0px;
+		width: 96px;
+		height: 76px;
+		background-size: contain;
+		z-index: 100;
+		background-color: black;
+		opacity: .75;
+	}
+	img {
+		display: inline-block;
+		height: 100%;
+	}
+	.rotate-ninety {
+		width: 375px;
+		display: inline-block;
+		img {
+			-ms-transform: rotate(90deg); /* IE 9 */
+		  -webkit-transform: rotate(90deg); /* Chrome, Safari, Opera */
+		  transform: rotate(90deg);
+		  height: 375px;
+		  width: 500px;
+		  position: relative;
+	    top: -63px;
+	    left: -63px;
+		}
+	}
+}
 
-
-
-
-
-
+.bottom-bar {
+	height: 75px;
+	background-color: $base-color;
+}
 
 
 

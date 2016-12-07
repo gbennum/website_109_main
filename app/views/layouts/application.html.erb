@@ -12,12 +12,15 @@
   <body>
   	<div class="welcome-navigation-bar">
 			<%= link_to('109 Main St. Stowe, VT', '/welcome/index')%>
-			<div id="dropdown_toggle" class="dropdown-toggle">Suites</div>
+			<div id="dropdown_toggle" class="dropdown-toggle">Apartments</div>
 			<div id="dropdown" class="hidden-dropdown">
 				<%= link_to('The Pinnacle Suite', '/suites/pinnacle')%>
 				<%= link_to('The Sterling Suite', '/suites/sterling')%>
 			</div>
+      <%= link_to('Stowe Village', '/welcome/stowe', :class => "dropdown-toggle")%>
+      <%= link_to('About 109 Main', '/welcome/109main', :class => "dropdown-toggle")%>
 		</div>
     <%= yield %>
+    <div class="bottom-bar"></div>
   </body>
 </html>
