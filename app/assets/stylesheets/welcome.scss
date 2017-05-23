@@ -78,7 +78,7 @@ body {
 		font-size: 47px;
   	line-height: 57px;
 		width: 100%;
-		max-width: 65vw;
+		max-width: 85vw;
 	  text-align: center;
 	  background-color: white;
 	  strong {
@@ -96,17 +96,17 @@ body {
 	.about-center-text-container {
 		@extend .about-center-container;
 		padding: 75px 0px 75px 0px;
+		background-color: transparent;
 	}
 	.about-center-image-container {
-		max-width: 75vw;
-		height: 350px;
+		max-width: 85vw;
+		line-height: 20px;
 		.suite-about-photograph {
 	  	width: 66%;
-	  	height: 350px;
 	  	display: inline-block;
 	  	img {
 	  		float: left;
-	  		height: 350px;
+	  		width: 100%;
 	  		background-size: contain;
 	  	}
 	  }
@@ -116,7 +116,6 @@ body {
 	  	float: right;
 	  	display: inline-block;
 	  	width: calc(34% - 50px);
-	  	height: 300px;
 	  	text-decoration: none;
 	  	color: $font-color;
 	  	.suite-about-name {
@@ -130,7 +129,7 @@ body {
 	  	}
 	  	.suite-about-price {
 	  		position: absolute;
-	  		bottom: 75px;
+	  		bottom: 15px;
 	  		vertical-align: baseline;
 	  		font-size: 12px;
 	  		font-weight: bold;
