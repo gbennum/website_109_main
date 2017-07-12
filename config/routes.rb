@@ -3,6 +3,8 @@ Rails.application.routes.draw do
   get 'welcome/109main'
   get 'suites/pinnacle'
   get 'suites/sterling'
+  get 'suites/mansfield'
+  get 'suites/spruce'
   get 'welcome/stowe'
 
   root 'welcome#index'
